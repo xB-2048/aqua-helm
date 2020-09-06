@@ -66,3 +66,7 @@ extraSecretEnvironmentVars: []
   # - envName: ENV_NAME
   #   secretName: name
   #   secretKey: key
+
+envoy:
+  enabled: false
+  configMap:

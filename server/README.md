@@ -142,6 +142,23 @@ Parameter | Description | Default
 `web.securityContext` | Set of security context for the container | `nil`
 `web.extraEnvironmentVars` | is a list of extra enviroment variables to set in the web deployments. | `{}`
 `web.extraSecretEnvironmentVars` | is a list of extra enviroment variables to set in the web deployments, these variables take value from existing Secret objects. | `[]`
+`envoy.enabled` | enabled envoy deployment. | `false`
+`envoy.replicaCount` | replica count | `1`
+`envoy.image.repository` | the docker image name to use | `envoyproxy/envoy-alpine`
+`envoy.image.tag` | The image tag to use. | `v1.14.1`
+`envoy.image.pullPolicy` | The kubernetes image pull policy. | `IfNotPresent`
+`envoy.service.type` | k8s service type | `LoadBalancer`
+`envoy.service.ports` | array of ports settings | `array`
+`envoy.certsSecretName` | tls certificates for envoy, **notice: required for current configuration in files envoy.yaml** | `nil`
+`envoy.livenessProbe` | liveness probes configuration for envoy | `{}`
+`envoy.readinessProbe` | readiness probes configuration for envoy | `{}`
+`envoy.resources` |	Resource requests and limits | `{}`
+`envoy.nodeSelector` |	Kubernetes node selector	| `{}`
+`envoy.tolerations` |	Kubernetes node tolerations	| `[]`
+`envoy.affinity` |	Kubernetes node affinity | `{}`
+`envoy.securityContext` | Set of security context for the container | `nil`
+
+`envoy.files.envoy\.yaml` | content of a full envoy configuration file as documented in https://www.envoyproxy.io/docs/envoy/latest/configuration/configuration | See [values.yaml](values.yaml)
 
 ## Issues and feedback
 
