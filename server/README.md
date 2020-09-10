@@ -101,7 +101,7 @@ Parameter | Description | Default
 `db.persistence.size` |	Persistent Volume size | `30Gi`
 `db.persistence.storageClass` |	Persistent Volume Storage Class | `unset`
 `db.image.repository` | the docker image name to use | `database`
-`db.image.tag` | The image tag to use. | `5.0`
+`db.image.tag` | The image tag to use. | `5.3`
 `db.image.pullPolicy` | The kubernetes image pull policy. | `IfNotPresent`
 `db.service.type` | k8s service type | `ClusterIP`
 `db.resources` |	Resource requests and limits | `{}`
@@ -112,7 +112,7 @@ Parameter | Description | Default
 `db.extraEnvironmentVars` | is a list of extra enviroment variables to set in the database deployments. | `{}`
 `db.extraSecretEnvironmentVars` | is a list of extra enviroment variables to set in the database deployments, these variables take value from existing Secret objects. | `[]`
 `gate.image.repository` | the docker image name to use | `gateway`
-`gate.image.tag` | The image tag to use. | `5.0`
+`gate.image.tag` | The image tag to use. | `5.3`
 `gate.image.pullPolicy` | The kubernetes image pull policy. | `IfNotPresent`
 `gate.service.type` | k8s service type | `ClusterIP`
 `gate.service.ports` | array of ports settings | `array`
@@ -126,7 +126,7 @@ Parameter | Description | Default
 `gate.extraEnvironmentVars` | is a list of extra enviroment variables to set in the gateway deployments. | `{}`
 `gate.extraSecretEnvironmentVars` | is a list of extra enviroment variables to set in the gateway deployments, these variables take value from existing Secret objects. | `[]`
 `web.image.repository` | the docker image name to use | `console`
-`web.image.tag` | The image tag to use. | `5.0`
+`web.image.tag` | The image tag to use. | `5.3`
 `web.image.pullPolicy` | The kubernetes image pull policy. | `IfNotPresent`
 `web.service.type` | k8s service type | `LoadBalancer`
 `web.service.ports` | array of ports settings | `array`

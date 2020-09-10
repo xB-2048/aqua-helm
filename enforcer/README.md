@@ -60,7 +60,7 @@ Parameter | Description | Default
 `gate.host` | gateway host | `aqua-gateway-svc`
 `gate.port` | gateway port | `8443`
 `image.repository` | the docker image name to use | `enforcer`
-`image.tag` | The image tag to use. | `5.0`
+`image.tag` | The image tag to use. | `5.3`
 `image.pullPolicy` | The kubernetes image pull policy. | `IfNotPresent`
 `resources` |	Resource requests and limits | `{}`
 `nodeSelector` |	Kubernetes node selector	| `{}`

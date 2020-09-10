@@ -53,7 +53,7 @@ db:
   auditssl: false
   image:
     repository: database
-    tag: "5.0"
+    tag: "5.3"
     pullPolicy: IfNotPresent
   service:
     type: ClusterIP
@@ -108,7 +108,7 @@ gate:
   replicaCount: 1
   image:
     repository: gateway
-    tag: "5.0"
+    tag: "5.3"
     pullPolicy: IfNotPresent
   service:
     type: ClusterIP
@@ -163,7 +163,7 @@ web:
   replicaCount: 1
   image:
     repository: console
-    tag: "5.0"
+    tag: "5.3"
     pullPolicy: IfNotPresent
   service:
     type: LoadBalancer
