@@ -38,6 +38,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
+  clusterIP: None
   type: ClusterIP
   selector:
     app: {{ .Release.Name }}-gateway

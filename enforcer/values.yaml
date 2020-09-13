@@ -59,6 +59,7 @@ tolerations: []
 # https://docs.aquasec.com/docs/enforcer-optional-variables
 extraEnvironmentVars: {}
   # ENV_NAME: value
+  # AQUA_TLS_VERIFY: true
 
 # extraSecretEnvironmentVars is a list of extra enviroment variables to set in the enforcer daemonset.
 # These variables take value from existing Secret objects.
