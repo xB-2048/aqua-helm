@@ -34,7 +34,7 @@ securityContext:
 hostRunPath: # pks - /var/vcap/sys/run/docker
 
 gate:
-  host: aqua-gateway-svc # example
+  host: aqua-gateway-svc # for envoy deployment use host for aqua-lb and port 443
   port: 8443
 
 image:
