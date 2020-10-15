@@ -337,7 +337,7 @@ envoy:
                     private_key:
                       filename: "/etc/ssl/envoy/tls.key"
         clusters:
-        - name: {{ .Release.Name }}-gateway-svc
+        - name: aqua-gateway-svc
           connect_timeout: 180s
           type: STRICT_DNS
           dns_lookup_family: V4_ONLY
