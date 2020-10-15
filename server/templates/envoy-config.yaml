@@ -9,7 +9,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-{{- range $key, $value := .Values.files }}
+{{- range $key, $value := .Values.envoy.files }}
   {{ $key }}: |-
 {{ $value | default "" | indent 4 }}
 {{- end -}}
