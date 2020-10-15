@@ -12,6 +12,10 @@ metadata:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
+{{- if .Values.envoy.service.annotations }}
+  annotations:
+{{ toYaml .Values.envoy.service.annotations | indent 4 }}
+{{- end }}
 spec:
   type: {{ .Values.envoy.service.type }}
   selector:

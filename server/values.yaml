@@ -112,6 +112,7 @@ gate:
     pullPolicy: IfNotPresent
   service:
     type: ClusterIP
+    annotations: {}
     ports:
       - name: aqua-gate
         port: 3622
@@ -167,6 +168,7 @@ web:
     pullPolicy: IfNotPresent
   service:
     type: LoadBalancer
+    annotations: {}
     ports:
       - name: aqua-web
         port: 8080
@@ -229,6 +231,7 @@ envoy:
   
   service:
     type: LoadBalancer
+    annotations: {}
     ports:
     - name: healthserver
       port: 8082
