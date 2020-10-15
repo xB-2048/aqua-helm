@@ -311,7 +311,7 @@ envoy:
                     - match:
                         prefix: "/"
                       route:
-                        cluster: {{ .Release.Name }}-gateway-svc
+                        cluster: aqua-gateway-svc
                         timeout: 0s
                 http_filters:
                 - name: envoy.filters.http.health_check
@@ -350,19 +350,19 @@ envoy:
                   max_pending_requests: 2147483647
                   max_requests: 2147483647
           load_assignment:
-            cluster_name: {{ .Release.Name }}-gateway-svc
+            cluster_name: aqua-gateway-svc
             endpoints:
             - lb_endpoints:
               - endpoint:
                   address:
                     socket_address:
-                      address: {{ .Release.Name }}-gateway-headless-svc.aqua.svc.cluster.local
+                      address: aqua-gateway-headless-svc.aqua.svc.cluster.local
                       port_value: 8443
           transport_socket:
               name: envoy.transport_sockets.tls
               typed_config:
                   "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
-                  sni: {{ .Release.Name }}-gateway-svc
+                  sni: aqua-gateway-svc
       admin:
         access_log_path: "/dev/stdout"
         address:
