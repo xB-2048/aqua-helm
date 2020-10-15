@@ -6,7 +6,7 @@ kind: Service
 metadata:
   finalizers:
   - service.kubernetes.io/load-balancer-cleanup
-  name: {{ .Release.Name }}-aqua-lb
+  name: aqua-lb
   labels:
     app: {{ .Release.Name }}-envoy
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
